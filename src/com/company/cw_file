@@ -1,4 +1,4 @@
-R,Read
-C,Create
-D,Delete
-U,Update
+MERN,Mongoose/MongoDB Express React NodeJS
+CRUD,Create Read Update Delete
+CSS,Cascading Style Sheet
+HTML,Hypertext Markup Language

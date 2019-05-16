@@ -23,24 +23,24 @@ public class Main {
 
         //HashMap
         HashMap<String, String> entries = new HashMap<String, String>();
-        entries.put("C","Create");
-        entries.put("R","Read");
-        entries.put("U","Update");
-        entries.put("D","Delete");
+        entries.put("HTML","Hypertext Markup Language");
+        entries.put("CSS","Cascading Style Sheet");
+        entries.put("MERN","Mongoose/MongoDB Express React NodeJS");
+        entries.put("CRUD","Create Read Update Delete");
 
 //        System.out.println(entries);
 
         try{
             FileWriter mywriter = new FileWriter("src/com/company/cw_file");
+            for( String s : entries.keySet()){
+                mywriter.write(s+","+ entries.get(s)+ "\n");
+            }
             Scanner user = new Scanner(System.in);
-            System.out.print("Enter a key: C,R,U, or D: ");
+            System.out.print("Enter a key: HTML, CSS, MERN, or CRUD: ");
             String userInput = user.nextLine();
 
             System.out.print(entries.get(userInput));
 
-            for( String s : entries.keySet()){
-                mywriter.write(s+","+ entries.get(s)+ "\n");
-            }
             mywriter.close();
         }
         catch (IOException e) {
