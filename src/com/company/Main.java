@@ -14,7 +14,7 @@ public class Main {
             Scanner readFile = new Scanner(file);
             while (readFile.hasNextLine()){
                 String txt = readFile.nextLine();
-                System.out.println(txt);
+//                System.out.println(txt);
             }
         }
         catch (Exception e){
@@ -28,7 +28,6 @@ public class Main {
         entries.put("MERN","Mongoose/MongoDB Express React NodeJS");
         entries.put("CRUD","Create Read Update Delete");
 
-//        System.out.println(entries);
 
         try{
             FileWriter mywriter = new FileWriter("src/com/company/cw_file");
@@ -37,10 +36,9 @@ public class Main {
             }
             Scanner user = new Scanner(System.in);
             System.out.print("Enter a key: HTML, CSS, MERN, or CRUD: ");
-            String userInput = user.nextLine();
+            String userInput = user.nextLine().trim();
 
             System.out.print(entries.get(userInput));
-
             mywriter.close();
         }
         catch (IOException e) {
